@@ -1,0 +1,28 @@
+{
+  "name": "indicators",
+  "version": "1.0.0",
+  "description": "System to generate generic indicators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negherbon/indicators.git"
+  },
+  "author": "Rafael Negherbon e Jorge Hess",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/negherbon/indicators/issues"
+  },
+  "homepage": "https://github.com/negherbon/indicators#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.14",
+    "es6-module-loader": "^0.17.11",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "zone.js": "^0.6.10"
+  }
+}
