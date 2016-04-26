@@ -3,7 +3,7 @@ import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 import {NavbarComponent} from './navbar.component';
 import {ToolbarComponent} from './toolbar.component';
 import {NameListService} from '../shared/index';
-import {LoginComponent} from '../+login/index';
+import {HomeComponent} from '../+home/index';
 
 @Component({
   selector: 'sd-app',
@@ -14,8 +14,8 @@ import {LoginComponent} from '../+login/index';
 @RouteConfig([
   {
     path: '/',
-    name: 'Login',
-    component: LoginComponent
+    name: 'Home',
+    component: HomeComponent
   }
 ])
 export class AppComponent {}
