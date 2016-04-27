@@ -1,11 +1,19 @@
-import {provide, enableProdMode} from 'angular2/core';
+import {provide} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
-import {ROUTER_PROVIDERS, APP_BASE_HREF} from 'angular2/router';
+import {ROUTER_PROVIDERS} from 'angular2/router';
 import {AppComponent} from './app/components/app.component';
-
-if ('<%= ENV %>' === 'prod') { enableProdMode(); }
+import { Http, HTTP_PROVIDERS } from 'angular2/http';
+import { AuthConfig, AuthHttp } from 'angular2-jwt';
 
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
+  HTTP_PROVIDERS,
+  provide(AuthHttp, {
+    useFactory: (http: Http) => {
+      return new AuthHttp(new AuthConfig({
+        tokenName: 'jwt'
+      }), http);
+    },
+    deps: [Http]
+  })
 ]);
