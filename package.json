@@ -122,6 +122,7 @@
     "@angular2-material/radio": "^2.0.0-alpha.3",
     "@angular2-material/sidenav": "^2.0.0-alpha.3",
     "@angular2-material/toolbar": "^2.0.0-alpha.3",
+    "angular2-jwt": "^0.1.12",
     "es6-module-loader": "^0.17.8",
     "es6-promise": "^3.1.2",
     "es6-shim": "0.35.0",
