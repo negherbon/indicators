@@ -1,9 +1,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig} from 'angular2/router';
-import {NavbarComponent} from './navbar.component';
-import {ToolbarComponent} from './toolbar.component';
-import {HomeComponent} from '../+home/index';
-import {LoginComponent} from '../+login/index';
+import {TemplateComponent} from '../template/index';
+import {LoginComponent} from '../login/index';
 import {LoggedInRouterOutlet} from '../loggedin.outlet';
 
 @Component({
@@ -12,15 +10,15 @@ import {LoggedInRouterOutlet} from '../loggedin.outlet';
   directives: [LoggedInRouterOutlet]
 })
 @RouteConfig([
-  { path: '/', redirectTo: ['/home'] },
   {
-    path: '/home',
-    name: 'Home',
-    component: HomeComponent
+    path: '/...',
+    name: 'App',
+    component: TemplateComponent,
+    useAsDefault: true
   },
   {
-    path: '/login',
-    name: 'Login',
+    path: "/login",
+    name: "Login",
     component: LoginComponent
   }
 ])
